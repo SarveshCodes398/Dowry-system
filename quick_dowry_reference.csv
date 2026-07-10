@@ -1,0 +1,15 @@
+Appearance_Score,Gender,Typical_Dowry_Range_Low,Typical_Dowry_Range_High,Typical_Category
+4.0,Female,65000,70000,High
+5.0,Female,64000,68000,High
+6.0,Female,63000,66000,High
+7.0,Female,62000,64000,High
+8.0,Female,60000,62000,Medium
+9.0,Female,55000,58000,Medium
+10.0,Female,50000,52000,Low
+4.0,Male,20000,30000,Low
+5.0,Male,25000,35000,Low
+6.0,Male,30000,45000,Low/Med
+7.0,Male,38000,52000,Medium
+8.0,Male,48000,60000,High
+9.0,Male,58000,68000,High
+10.0,Male,63000,75000,High
