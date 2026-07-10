@@ -14,7 +14,7 @@ function Footer() {
             </p>
           </div>
           <div className="footer-section">
-            <h4 className="footer-section-title">Quick Links</h4>
+            <h4 className="footer-section-title">Navigation</h4>
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/predict">Predict Dowry</Link></li>
@@ -29,8 +29,6 @@ function Footer() {
               <li>Node.js</li>
               <li>Express</li>
               <li>Multer</li>
-              <li>Python</li>
-              <li>Scikit-learn</li>
             </ul>
           </div>
         </div>

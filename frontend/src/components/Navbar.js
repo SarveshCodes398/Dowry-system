@@ -8,7 +8,7 @@ function Navbar() {
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/predict', label: 'Predict Dowry' },
+    { path: '/predict', label: 'Predict' },
     { path: '/history', label: 'History' },
     { path: '/stats', label: 'Statistics' }
   ];

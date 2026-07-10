@@ -1,15 +1,14 @@
 .footer {
-  background: #333;
-  color: white;
-  padding: 3rem 0 1.5rem;
-  margin-top: auto;
+  background: var(--primary);
+  color: var(--white);
+  padding: 4rem 0 2rem;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
 .footer-section {
@@ -17,22 +16,23 @@
 }
 
 .footer-title {
+  color: var(--white);
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: white;
 }
 
 .footer-description {
-  color: #ccc;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  font-size: 0.9375rem;
 }
 
 .footer-section-title {
+  color: var(--white);
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: white;
 }
 
 .footer-links {
@@ -42,33 +42,36 @@
 }
 
 .footer-links li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .footer-links a {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 0.9375rem;
 }
 
 .footer-links a:hover {
-  color: #667eea;
+  color: var(--white);
 }
 
 .footer-bottom {
-  border-top: 1px solid #444;
-  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
   text-align: center;
 }
 
 .footer-bottom p {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.6);
   margin: 0.5rem 0;
+  font-size: 0.875rem;
 }
 
 .disclaimer {
-  font-size: 0.875rem;
-  color: #888;
+  font-size: 0.8125rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -82,6 +85,10 @@
   }
 
   .footer-links {
+    text-align: center;
+  }
+  
+  .footer-description {
     text-align: center;
   }
 }
