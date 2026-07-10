@@ -1,0 +1,15 @@
+Appearance_Score,Gender,Probability_High_Dowry,Predicted_Category,Estimated_Dowry
+4.0,Female,0.6867,High Dowry,57468.54
+4.0,Male,0.3707,Low/Medium Dowry,44829.45
+5.0,Female,0.7403,High Dowry,59612.45
+5.0,Male,0.4338,Low/Medium Dowry,47352.9
+6.0,Female,0.7876,High Dowry,61503.03
+6.0,Male,0.4991,Low/Medium Dowry,49965.15
+7.0,Female,0.8282,High Dowry,63129.35
+7.0,Male,0.5645,High Dowry,52578.59
+8.0,Female,0.8625,High Dowry,64498.75
+8.0,Male,0.6276,High Dowry,55105.44
+9.0,Female,0.8908,High Dowry,65631.21
+9.0,Male,0.6867,High Dowry,57469.2
+10.0,Female,0.9138,High Dowry,66553.83
+10.0,Male,0.7403,High Dowry,59613.04
