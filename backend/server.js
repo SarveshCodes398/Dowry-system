@@ -3,7 +3,6 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const { PythonShell } = require('python-shell');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -233,40 +232,13 @@ function estimateAppearanceScore(imagePath) {
   return Math.min(10, Math.max(4, parseFloat(score.toFixed(2))));
 }
 
-// Helper function to predict dowry using Python model
+// Helper function to predict dowry using JavaScript implementation
+// Uses the same logic as the Python logistic regression model
 async function predictDowry(appearanceScore, gender) {
-  return new Promise((resolve, reject) => {
-    try {
-      // Use the existing Python model
-      const options = {
-        mode: 'text',
-        pythonPath: 'python3',
-        scriptPath: path.join(__dirname, '..'),
-        args: [appearanceScore.toString(), gender]
-      };
-
-      PythonShell.run('predict_dowry.py', options, (err, results) => {
-        if (err) {
-          console.error('Python script error:', err);
-          // Fallback to JavaScript implementation
-          const fallbackResult = calculateDowryFallback(appearanceScore, gender);
-          resolve(fallbackResult);
-        } else {
-          try {
-            const result = JSON.parse(results.join(''));
-            resolve(result);
-          } catch (parseError) {
-            console.error('Parse error:', parseError);
-            const fallbackResult = calculateDowryFallback(appearanceScore, gender);
-            resolve(fallbackResult);
-          }
-        }
-      });
-    } catch (error) {
-      console.error('Error running Python script:', error);
-      const fallbackResult = calculateDowryFallback(appearanceScore, gender);
-      resolve(fallbackResult);
-    }
+  return new Promise((resolve) => {
+    // Use JavaScript fallback directly (no Python dependency needed)
+    const fallbackResult = calculateDowryFallback(appearanceScore, gender);
+    resolve(fallbackResult);
   });
 }
 
