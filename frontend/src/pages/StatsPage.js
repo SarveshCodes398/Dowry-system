@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getStats, getHistory } from '../services/api';
-import { Bar, Pie, Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, PointElement, LineElement } from 'chart.js';
+import { Bar, Pie } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 
 // Register ChartJS components
 ChartJS.register(
@@ -17,7 +17,6 @@ ChartJS.register(
 );
 
 function StatsPage() {
-  const [stats, setStats] = useState(null);
   const [history, setHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -32,12 +31,8 @@ function StatsPage() {
       setIsLoading(true);
       setError(null);
       
-      const [statsResponse, historyResponse] = await Promise.all([
-        getStats(),
-        getHistory()
-      ]);
+      const historyResponse = await getHistory();
       
-      setStats(statsResponse.data);
       setHistory(historyResponse.data || []);
     } catch (err) {
       setError(err.message || 'Failed to fetch statistics');
