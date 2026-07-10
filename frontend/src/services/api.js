@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 // Create axios instance with base URL
+// For production: Set REACT_APP_API_URL in Vercel environment variables
+// For development: Uses localhost:5000
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000',
   timeout: 10000,
